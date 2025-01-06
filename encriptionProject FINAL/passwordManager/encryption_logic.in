@@ -1,0 +1,12 @@
+
+        % Axioms for Encryption/Decryption
+        formulas(assumptions).
+        all x (decrypt(encrypt(x)) = x).  % Decryption undoes encryption
+        all x (encrypt(decrypt(x)) = x).  % Encryption undoes decryption
+        end_of_list.
+
+        % Goal: Validate encryption and decryption
+        formulas(goals).
+        decrypt(encrypt("abc")) = "abc".  % Goal for validation
+        end_of_list.
+        
